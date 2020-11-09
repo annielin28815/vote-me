@@ -1,0 +1,20 @@
+<!-- 如果有問題，就用清單方式印出來。 -->
+<% if candidate.errors.any? %>
+<ul>
+  <% candidate.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  <% end %>
+</ul>
+<%end %>
+
+<!-- 新增表單 -->
+<%= form_for(candidate) do |form| %>
+<div><%= form.label :name %> <%= form.text_field :name %></div>
+
+<div><%= form.label :party %> <%= form.text_field :party %></div>
+
+<div><%= form.label :age %> <%= form.text_field :age %></div>
+
+<div><%= form.label :politics %> <%= form.text_area :politics %></div>
+
+<%= form.submit %> <% end %>

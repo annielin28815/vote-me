@@ -1,0 +1,16 @@
+// name的地方
+.field_with_errors {
+  // 標題和輸入框不斷行
+  display: inline-block;
+
+  // 如果是error，那就給1px的紅框
+  input[type="text"] {
+    border-color: red;
+    border-width: 1px;
+  }
+
+  // 把標題也變紅色
+  label {
+    color: red;
+  }
+}

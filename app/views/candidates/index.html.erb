@@ -1,0 +1,33 @@
+
+<h1>Hi</h1>
+
+<%= link_to 'Add Candidate', new_candidate_path %>
+
+<table class="table">
+  <tr>
+    <td></td>
+    <td>Votes</td>
+    <td>Name</td>
+    <td>Party</td>
+    <td>Age</td>
+    <td>Action</td>
+  </tr>
+
+  <% @candidates.each do |candidate| %>
+  <tr>
+    <td>
+      <%= link_to 'vote', vote_candidate_path(candidate.id),method: 'POST', data: { confirm: "Are sure to vote it?"}, class:"btn btn-danger btn-xs" %>
+    </td>
+    <!-- vote_logs.size這個寫法比較能有關聯性 -->
+    <td><%= candidate.vote_logs.size %></td>
+    <td><%= link_to candidate.name, candidate_path(candidate.id) %></a></td>
+    <td><%= candidate.party %></td>
+    <td><%= candidate.age %></td>
+    <td>
+      <%= link_to 'update', edit_candidate_path(candidate.id) %>
+      <!-- data: {confirm: 'are you sure?!'}是一個防呆機制，會跳出像alert那種提醒視窗。 -->
+      <%= link_to 'delete', candidate_path(candidate.id), method: 'delete', data: {confirm: 'are you sure?!'} %>
+    </td>
+  </tr>
+  <% end %>
+</table>
