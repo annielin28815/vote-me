@@ -1,3 +1,98 @@
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
-@import "bootstrap";
+body {
+  background-color: #c9c0d3;
+}
+h1 {
+  color: #6a4c9c;
+  font-weight: bold;
+  text-align: center;
+  width: 500px;
+  left: 0;
+  right: 0;
+  margin: 50px auto 20px auto;
+  // margin: 60px 0;
+  padding-bottom: 20px;
+  border-bottom: 10px dotted #ddd;
+}
+a {
+  text-decoration: none;
+  color: #66327c;
+  font-weight: bolder;
+}
+.add-btn {
+  background-color: #b5495b;
+  color: #fff;
+  width: 130px;
+  height: 50px;
+  border-radius: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.add-btn a {
+  color: #fff;
+  display: block;
+}
+.edit-btn {
+  background-color: #b495bb;
+  color: #fff;
+  width: 75px;
+  height: 40px;
+  border-radius: 40px;
+  display: inline-block;
+  margin: auto;
+  align-items: center;
+  line-height: 40px;
+}
+.edit-btn a {
+  color: #fff;
+  display: block;
+}
+.vote-btn {
+  background-color: #b495bb;
+  color: #7d7d7d;
+  width: 75px;
+  height: 40px;
+  border-radius: 40px;
+  margin: 10px 0;
+  line-height: 40px;
+}
+.vote-btn a {
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+}
+table {
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px;
+  border: 3px double #c9c0d3; //雙框線
+  width: 60%;
+  background-color: rgba($color: #fff, $alpha: 0.4);
+  border-radius: 10px;
+  thead {
+    font-weight: bold;
+    font-size: 18px;
+    th:first-child {
+      border-radius: 10px 0 0 0;
+    }
+    th:last-child {
+      border-radius: 0 10px 0 0;
+    }
+  }
+}
+thead,
+tbody {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+thead td {
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 2px #c9c0d3 solid;
+}
